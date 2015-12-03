@@ -1,0 +1,19 @@
+body{
+	background-color: #E20E0E;
+}
+
+a{
+	color: #EBE2E2;
+}
+
+label, .title{
+	color: #BCBCBC;
+}
+
+.fa-map-marker{
+	font-size: 44px;
+}
+
+.header{
+	margin-top: 20px;
+}
