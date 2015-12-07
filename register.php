@@ -15,6 +15,4 @@
 
 	$qry = $con->query($sql);
 
-	header("Location:index.php");
-
 ?>
