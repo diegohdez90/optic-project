@@ -17,18 +17,18 @@
   <body onload="load()">
     <div class="container">
       <div class="row header">
-        <div class="col-md-8"><h2 class="text-center title">Ópticas en la Ciudad de <span>Atlixco</span><br>  Zona: Centro</h2></div>
+        <div class="col-md-8"><h2 class="text-center title">&Oacute;pticas en la Ciudad de <span>Atlixco</span><br>  Zona: Centro</h2></div>
         <div class="col-md-4"><a href="registrar.php">
-          <i class="fa fa-map-marker"></i>Registra tu óptica</a>
+          <i class="fa fa-map-marker"></i>Registra tu &oacute;ptica</a>
           <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Selecciona tu ciudad
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
               <li><a class="pue" href="puebla.php">Puebla</a></li>
               <li><a class="atl" href="atlixco.php">Atlixco</a></li>
-              <li><a class="sac" href="san-andres-cholula.php">San Andrés Cholula</a></li>
+              <li><a class="sac" href="san-andres-cholula.php">San Andr&eacute;s Cholula</a></li>
               <li><a class="spc" href="san-pedro-cholula.php">San Pedro Cholula</a></li>
-              <li><a class="smt" href="san-martin-texmelucan.php">San Martín Texmelucan</a></li>
+              <li><a class="smt" href="san-martin-texmelucan.php">San Mart&iacute;n Texmelucan</a></li>
             </ul>
           </div>
         </div>
