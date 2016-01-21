@@ -24,7 +24,7 @@ if (!$db_selected) {
 }
 
 // Select all the rows in the markers table
-$query = "SELECT * FROM optica WHERE 1";
+$query = "SELECT * FROM optica WHERE ciudad='Puebla'";
 $result = mysql_query($query);
 if (!$result) {
   die('Consulta invalida : ' . mysql_error());

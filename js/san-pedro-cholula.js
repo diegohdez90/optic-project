@@ -16,12 +16,13 @@
           var address = markers[i].getAttribute("address");
           var director = markers[i].getAttribute("responsable");
           var email = markers[i].getAttribute("e-mail");
+          var ext = markers[i].getAttribute("extension");
           var phone = markers[i].getAttribute("telefono");
           //var type = markers[i].getAttribute("type");
           var point = new google.maps.LatLng(
               parseFloat(markers[i].getAttribute("lat")),
               parseFloat(markers[i].getAttribute("lng")));
-          var html = "<b>" + name + "</b> <br/>" + address + "<br/>" + director + "<br/>Tel: " + phone + "<br/>" + email;
+          var html = "<b>" + name + "</b> <br/><b>Direcci&oacute;n: </b>" + address + "<br/><b>Responsable: </b>" + director + "<br/><b>Tel&eacute;fono: </b>Tel: ("+ext+")" + phone + "<br/><b>E-mail: </b>" + email;
           var icon = 'http://labs.google.com/ridefinder/images/mm_20_red.png'
           var marker = new google.maps.Marker({
             map: map,

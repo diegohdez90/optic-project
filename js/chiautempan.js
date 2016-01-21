@@ -1,23 +1,23 @@
 
     function load() {
-        var map = new google.maps.Map(document.getElementById("Atlixco"), {
-        center: new google.maps.LatLng(18.9125,-98.427778),
+        var map = new google.maps.Map(document.getElementById("Chiautempan"), {
+        center: new google.maps.LatLng(19.3124562,-98.192087),
         zoom: 15,
       //  mapTypeId: 'roadmap'
       });
       var infoWindow = new google.maps.InfoWindow;
 
       // Change this depending on the name of your PHP file
-      downloadUrl("generate-xml-3.php", function(data) {
+      downloadUrl("generate-xml-chiautempan.php", function(data) {
         var xml = data.responseXML;
         var markers = xml.documentElement.getElementsByTagName("marker");
         for (var i = 0; i < markers.length; i++) {
           var name = markers[i].getAttribute("name");
           var address = markers[i].getAttribute("address");
           var director = markers[i].getAttribute("responsable");
-          var ext = markers[i].getAttribute("extension");
-          var email = markers[i].getAttribute("e-mail");
-          var phone = markers[i].getAttribute("telefono");
+          var email = markers[i].getAttribute("email");
+          var ext = markers[i].getAttribute("ext");
+          var phone = markers[i].getAttribute("phone");
           //var type = markers[i].getAttribute("type");
           var point = new google.maps.LatLng(
               parseFloat(markers[i].getAttribute("lat")),

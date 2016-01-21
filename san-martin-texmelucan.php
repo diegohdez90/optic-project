@@ -29,6 +29,9 @@
               <li><a class="sac" href="san-andres-cholula.php">San Andr&eacute;s Cholula</a></li>
               <li><a class="spc" href="san-pedro-cholula.php">San Pedro Cholula</a></li>
               <li><a class="smt" href="san-martin-texmelucan.php">San Mart&iacute;n Texmelucan</a></li>
+              <li><a class="smt" href="apizaco.php">Apizaco</a></li>
+              <li><a class="smt" href="chiautempan.php">Santa Ana Chiautempan</a></li>
+              <li><a class="smt" href="tlaxcala.php">Tlaxcala</a></li>
             </ul>
           </div>
         </div>
