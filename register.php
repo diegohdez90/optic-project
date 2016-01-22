@@ -11,7 +11,7 @@
 		die("DB connection failed:" . $con->connection_error);
 	}
 
-	$sql = "INSERT INTO `optica`(`nombre`,`ubicacion`,`responsable`,`telefono`,`e-mail`)VALUES('$data->name','$data->address','$data->director','$data->phone','$data->email')";
+	$sql = "INSERT INTO `optica`(`nombre`,`ubicacion`,`responsable`,`telefono`,`email`,`ext`,`ciudad`,`estado`)VALUES('$data->name','$data->address','$data->director','$data->phone','$data->email','$data->ext','$data->city','$data->state')";
 
 	$qry = $con->query($sql);
 

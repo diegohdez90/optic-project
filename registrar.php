@@ -1,7 +1,7 @@
-<!DOCTYPE html >
+<!DOCTYPE html lang="es">
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
     <title>&Oacute;pticas localizadas en el Centro Hist&oacute;rico de la Ciudad de Puebla</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -15,7 +15,7 @@
   <body>
     <div class="container">
       <div class="row header">
-        <div class="col-md-8"><h2 class="text-center title">Registro de Ópticas</h2></div>
+        <div class="col-md-8"><h2 class="text-center title">Registro de &Oacute;pticas</h2></div>
         <div class="col-md-4">
           <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Selecciona tu ciudad
@@ -32,11 +32,14 @@
       </div>
       <div class="row" id="register" ng-app="registerApp" ng-controller="registerCtrl" ng-submit="pushData(frm)">
         <form class="form-horizontal">
-          <label>Nombre de la Óptica</label><input class="form-control" type="text" ng-model="frm.name">
-          <label>Dirección</label><input class="form-control" type="text" ng-model="frm.address">
+          <label>Nombre de la &Oacute;ptica</label><input class="form-control" type="text" ng-model="frm.name">
+          <label>Direcci&oacute;n</label><input class="form-control" type="text" ng-model="frm.address">
           <label>Responsable</label><input class="form-control" type="text" ng-model="frm.director">
-          <label>Teléfono</label><input class="form-control" type="text" ng-model="frm.phone">
-          <label>Correo Electrónico</label><input class="form-control" type="text" ng-model="frm.email">
+          <label>Extensi&oacute;n</label><input class="form-control" type="text" ng-model="frm.ext">
+          <label>Tel&eacute;fono</label><input class="form-control" type="text" ng-model="frm.phone">
+          <label>Correo Electr&oacute;nico</label><input class="form-control" type="text" ng-model="frm.email">
+          <label>Ciudad</label><input class="form-control" type="text" ng-model="frm.city">
+          <label>Estado</label><input class="form-control" type="text" ng-model="frm.state">
           <input type="submit" value="Registrar">
         </form>
       </div>
