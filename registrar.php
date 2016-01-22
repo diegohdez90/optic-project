@@ -26,6 +26,9 @@
               <li><a class="sac" href="san-andres-cholula.php">San Andrés Cholula</a></li>
               <li><a class="spc" href="san-pedro-cholula.php">San Pedro Cholula</a></li>
               <li><a class="smt" href="san-martin-texmelucan.php">San Martín Texmelucan</a></li>
+              <li><a class="smt" href="apizaco.php">Apizaco</a></li>
+              <li><a class="smt" href="chiautempan.php">Santa Ana Chiautempan</a></li>
+              <li><a class="smt" href="tlaxcala.php">Tlaxcala</a></li>
             </ul>
           </div>
         </div>
@@ -54,7 +57,7 @@
     .controller('registerCtrl', ['$scope', '$http', '$log', '$location', '$window', function($scope, $http, $log, $location, $window) {
 
       $scope.pushData = function($params) {
-        $http.post('register.php',{'name':$params.name, 'address':$params.address, 'director':$params.director, 'phone':$params.phone, 'email':$params.email})
+        $http.post('register.php',{'name':$params.name, 'address':$params.address, 'director':$params.director, 'ext':$params.ext, 'phone':$params.phone, 'email':$params.email, 'city':$params.city, 'state':$params.state})
           .success(function(data) {
             $window.location.href = "index.php";
           })
