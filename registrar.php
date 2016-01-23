@@ -1,7 +1,7 @@
-<!DOCTYPE html lang="es">
+<!DOCTYPE html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8 "/>
     <title>&Oacute;pticas localizadas en el Centro Hist&oacute;rico de la Ciudad de Puebla</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -23,9 +23,9 @@
             <ul class="dropdown-menu">
               <li><a class="pue" href="puebla.php">Puebla</a></li>
               <li><a class="atl" href="atlixco.php">Atlixco</a></li>
-              <li><a class="sac" href="san-andres-cholula.php">San Andrés Cholula</a></li>
+              <li><a class="sac" href="san-andres-cholula.php">San Andr&eacute;s Cholula</a></li>
               <li><a class="spc" href="san-pedro-cholula.php">San Pedro Cholula</a></li>
-              <li><a class="smt" href="san-martin-texmelucan.php">San Martín Texmelucan</a></li>
+              <li><a class="smt" href="san-martin-texmelucan.php">San Mart&iacute;n Texmelucan</a></li>
               <li><a class="smt" href="apizaco.php">Apizaco</a></li>
               <li><a class="smt" href="chiautempan.php">Santa Ana Chiautempan</a></li>
               <li><a class="smt" href="tlaxcala.php">Tlaxcala</a></li>
@@ -34,16 +34,16 @@
         </div>
       </div>
       <div class="row" id="register" ng-app="registerApp" ng-controller="registerCtrl" ng-submit="pushData(frm)">
-        <form class="form-horizontal">
-          <label>Nombre de la &Oacute;ptica</label><input class="form-control" type="text" ng-model="frm.name">
-          <label>Direcci&oacute;n</label><input class="form-control" type="text" ng-model="frm.address">
-          <label>Responsable</label><input class="form-control" type="text" ng-model="frm.director">
-          <label>Extensi&oacute;n</label><input class="form-control" type="text" ng-model="frm.ext">
-          <label>Tel&eacute;fono</label><input class="form-control" type="text" ng-model="frm.phone">
-          <label>Correo Electr&oacute;nico</label><input class="form-control" type="text" ng-model="frm.email">
-          <label>Ciudad</label><input class="form-control" type="text" ng-model="frm.city">
-          <label>Estado</label><input class="form-control" type="text" ng-model="frm.state">
-          <input type="submit" value="Registrar">
+        <form role="form" class="form-horizontal">
+          <div class="form-group"><label>Nombre de la &Oacute;ptica</label><input class="form-control" type="text" ng-model="frm.name"></div>
+          <div class="form-group"><label>Direcci&oacute;n</label><input class="form-control" type="text" ng-model="frm.address"></div>
+          <div class="form-group"><label>Responsable</label><input class="form-control" type="text" ng-model="frm.director"></div>
+          <div class="form-group"><label>Extensi&oacute;n</label><input class="form-control" type="text" ng-model="frm.ext"></div>
+          <div class="form-group"><label>Tel&eacute;fono</label><input class="form-control" type="text" ng-model="frm.phone"></div>
+          <div class="form-group"><label>Correo Electr&oacute;nico</label><input class="form-control" type="text" ng-model="frm.email"></div>
+          <div class="form-group"><label>Ciudad</label><input class="form-control" type="text" ng-model="frm.city"></div>
+          <div class="form-group"><label>Estado</label><input class="form-control" type="text" ng-model="frm.state"></div>
+          <input class="btn btn-default" type="submit" value="Registrar">
         </form>
       </div>
 

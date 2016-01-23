@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tiempo de generación: 22-12-2015 a las 14:47:29
--- Versión del servidor: 5.5.24-log
--- Versión de PHP: 5.4.3
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 22-01-2016 a las 09:16:32
+-- Versión del servidor: 5.6.24
+-- Versión de PHP: 5.6.8
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -27,85 +27,128 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `optica` (
-  `idoptica` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(64) NOT NULL,
+  `idoptica` int(11) NOT NULL,
+  `nombre` varchar(32) NOT NULL,
   `ubicacion` varchar(128) NOT NULL,
-  `responsable` varchar(128) DEFAULT NULL,
+  `responsable` varchar(45) DEFAULT NULL,
+  `ext` int(11) DEFAULT NULL,
   `telefono` int(11) DEFAULT NULL,
-  `e-mail` varchar(45) DEFAULT NULL,
-  `lat` float(7,5) NOT NULL,
-  `long` float(7,5) NOT NULL,
-  PRIMARY KEY (`idoptica`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=63 ;
+  `email` varchar(45) DEFAULT NULL,
+  `ciudad` varchar(32) DEFAULT NULL,
+  `estado` varchar(32) DEFAULT NULL,
+  `lat` float NOT NULL,
+  `lng` float NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `optica`
 --
 
-INSERT INTO `optica` (`idoptica`, `nombre`, `ubicacion`, `responsable`, `telefono`, `e-mail`, `lat`, `long`) VALUES
-(1, 'Veotek', 'Calle 3 Sur 302 Altos, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04419, -98.20068),
-(2, 'Optica Eduardos', 'Av 4 Poniente 506, Centro, 72000 Puebla, Pue.', '', 0, '', 19.04778, -98.20113),
-(3, 'Optica Galerias Plaza', 'Calle 4 Nte 1001, Centro, 72000 Puebla, Pue.', '', 0, '', 19.04685, -98.19342),
-(4, 'Optica el Optometro', 'Av 3 Poniente 519, Centro, Puebla, C.P. 72000, Pue.', '', 2322084, '', 19.04544, -98.20294),
-(5, 'Optica Oculista Dra. Ignacia Enriquez Valdes', '9 Sur 904, Centro, Puebla, C.P. 72000, Pue.', '', 2980233, '', 19.04412, -98.20669),
-(6, 'Ah Optica', 'Ave Reforma 511, Centro, Puebla, C.P. 72000, Pue.', '', 1307636, '', 19.04402, -98.19991),
-(7, 'Ah Optica', 'Ave 3 Poniente 145, Centro, Puebla, C.P. 72000, Pue.', '', 2423058, '', 19.04599, -98.20207),
-(8, 'Grupo Optico Rx', 'Calle 3 Poniente 319 2, Centro, Puebla, C.P. 72000, Pue.', '', 2324068, '', 19.04500, -98.20177),
-(9, 'Macro Optica Moriel', 'Calle 10 Oriente 21, Centro, Puebla, C.P. 72000, Pue.', '', 2468637, '', 19.04762, -98.19524),
-(10, 'Optica Jesus', 'Calle 9 Sur S/N Loc C, Centro, Puebla, C.P. 72000, Pue.', '', 4677191, '', 19.04688, -98.20501),
-(11, 'Optica Nova', 'Calle 3 Poniente 311, Centro, Puebla, C.P. 72000, Pue.', '', 2466633, '', 19.04476, -98.20132),
-(12, 'Optica Quality', 'Calle 16 De Septiembre 1101, Centro, Puebla, C.P. 72000, Pue.', '', 4032582, '', 19.04045, -98.20106),
-(13, 'Optica Samid', 'Calle 3 Pte 108, Centro, Puebla, C.P. 72000, Pue.', '', 2423777, '', 19.04393, -98.19943),
-(14, 'Opticas Devlyn', 'Ave Reforma 105, Centro, Puebla, C.P. 72000, Pue.', '', 2325553, '', 19.04505, -98.19995),
-(15, 'Optic Norte', 'Call 16 De Septiembre 702, Centro, Puebla, C.P. 72000, Pue.', '', 5734098, '', 19.04190, -98.20005),
-(16, 'Optiman Puebla', '7 Norte 204, Centro, Puebla, C.P. 72000, Pue.', '', 2325375, '', 19.04796, -98.20240),
-(17, 'Optica Central', 'Cll Reforma 301, Centro, Puebla, C.P. 72000, Pue.', 'J Gonzalez Angulo', 2326875, '', 19.04525, -98.20033),
-(18, 'Optica del Angel', 'Ave 5 Poniente 706, Centro, Puebla, C.P. 72000, Pue.', 'Servando Martinez Del Angel', 2323972, '', 19.04557, -98.20462),
-(19, 'Optivision', 'Ave 5 Poniente 712, Centro, Puebla, C.P. 72000, Pue.', 'Susana Macias Martinez', 2322861, '', 19.04556, -98.20459),
-(20, 'Optica 2020 Ray-Ban', 'Av 3 Poniente 137,  Centro, Puebla, C.P. 72000, Pue.', 'Jose Guillermo Medina Alvarez', 2465266, '', 19.04403, -98.19991),
-(21, 'Optica Joy', 'Ave 3 Pte 136, Centro, Puebla, C.P. 72000, Pue.', 'Manuel Salvador Monroy Ferra', 2327425, '', 19.04419, -98.19995),
-(22, 'Optica Londres', 'Ave Reforma 143, Centro, Puebla, C.P. 72000, Pue.', 'Manuel Moriel Sosa', 2425464, '', 19.04504, -98.19993),
-(23, 'Optica del Carmen', 'Calle 16 De Septiembre 1916, Centro, Puebla, C.P. 72000, Pue.', 'Mariana Sanchez Popoca', 2372296, '', 19.03691, -98.20296),
-(24, 'Optica Metalica', 'Clle Reforma 519, Centro, Puebla, C.P. 72000, Pue.', 'Ernesto Alonso Tovar Perdigon', 2329553, '', 19.04630, -98.20237),
-(25, 'Optica Oculista', 'Calle 9 Sur 904, Col. Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04412, -98.20665),
-(26, 'Outlet Optic', 'Av 5 Poniente No. 139 Local B, Centro, Puebla, C.P. 72000, Pue.', '', 2988961, '', 19.04347, -98.20073),
-(27, 'Optica Visuality', 'Calle 2 Norte No. 410 - A Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04576, -98.19588),
-(28, 'Optica Americana', 'Calle 5 Norte No. 201 Local B, Centro, Puebla, C.P. 72000, Pue.', '', 2320718, '', 19.04685, -98.20124),
-(29, 'Opticas Lux', 'Calle 4 Norte No. 2, Centro, Puebla, C.P. 72000, Pue.', '', 2252090, '', 19.04295, -98.19557),
-(30, 'Optica Jeshua', 'Calle 16 De Septiembre No. 1303, El Carmen, Puebla, C.P.  72530 ,Pue.', '', 4679136, '', 19.03968, -98.20146),
-(31, 'Optica Esteli', 'Calle 4 Norte No. 219, Centro, Puebla, C.P.72000, Pue.', '', 0, '', 19.03828, -98.19843),
-(32, 'Optica Erma', 'Av 21 Oriente No. 24, El Carmen, Puebla, C.P. 72530, Pue.', '', 2375118, '', 19.03619, -98.20182),
-(33, 'Optica Manhattan', 'Calle 7 Norte No.205 C, Centro, Puebla, C.P. 72000, Pue.', '', 3683676, '', 19.04814, -98.20244),
-(34, 'Optica el Angel', 'Calle 9 Sur No. 305 Local C, Centro, Puebla, C.P. 72000, Pue.', '', 6242422, '', 19.04620, -98.20551),
-(35, 'Optica Especializada Admira', 'Av 10 Oriente No. 201-A, Centro, Puebla, C.P. 72000, Pue.', '', 2423184, '', 19.04754, -98.19486),
-(36, 'Optica Rango', 'Calle 2 Norte No. 612-A, Col Centro, Puebla, C.P. 72000,Pue', '', 0, '', 19.04647, -98.19539),
-(37, 'OJ Optica Jireh', 'Calle 2 Norte 1207-D, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04879, -98.19419),
-(38, 'Optica Puebla', 'Calle 2 Norte No. 608, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04639, -98.19551),
-(39, 'Optica New Vision', 'Av 16 Oriente No. 201 -D, Centro, Puebla, C.P. 72000, Pue.', '', 2326799, '', 19.04968, -98.19361),
-(40, 'Lentes Genesis', 'Calle 9 Sur No. 108 Local C, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04686, -98.20503),
-(41, 'Macro Optica Moriel', 'Calle 3 Poniente No. 307, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04472, -98.20125),
-(42, 'Optica Paola', 'Calle 3 Sur No 501, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04357, -98.20118),
-(43, 'Optica 3 y 3', 'Av 3 Poniente No. 303 Local D, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04463, -98.20084),
-(44, 'Opticks Tiffany Group', 'Av 3 Poniente No, 306 Local A, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04473, -98.20107),
-(45, 'Tiffany Opticas', 'Av 3 Poniente No. 304 Local C, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04466, -98.20091),
-(46, 'Eye Optica', 'Av 3 Poniente No. 325, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04511, -98.20201),
-(47, 'Optica Mira', 'Av 3 Poniente No. 314 Local 4, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04502, -98.20167),
-(48, 'Optica Optimar', 'Av 3 Poniente No. 317 Local B, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04494, -98.20167),
-(49, 'Optica Alonso', 'Calle 3 Sur 305 - C , Centro, Puebla, C.P. 72000, Pue.', '', 2321465, '', 19.04468, -98.20095),
-(50, 'Optica Class', 'Av 3 Poniente No. 305 Local A, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04461, -98.20101),
-(51, 'Opticas San Agustin', 'Av 3 Poniente No. 311 Local A, Centro, Puebla, C.P. 72000, Pue.', '', 2462895, '', 19.04481, -98.20142),
-(52, 'Optica Exclusiva', 'Av 4 Poniente No. 101 Local I, Centro, Puebla, C.P. 72000, Pue.', '', 0, '', 19.04606, -98.19804),
-(53, 'Optica El Lensometro', 'Av 3 Poniente No. 535, Centro, Puebla, C.P. 72000, Pue.', '', 3611591, '', 19.04583, -98.20343),
-(54, 'Optica Fama', 'Calle 3 Sur No. 107 Local A, Centro, Puebla, C.P. 72000, Pue.', '', 2328094, '', 19.04478, -98.20046),
-(55, 'Optica Texas', '3 Norte No.1 Col. Centro, Puebla.', '', 2324737, '', 19.04551, -98.20003),
-(56, 'Optica medica', 'Av. Reforma, No.904,. Col. Centro, C.P. 72000. ', '', 2463415, '', 19.04770, -98.20500),
-(57, 'Grupo Optico Empresarial', '3 Poniente No. 712-2, Centro, Puebla, C.P. 72000', '', 2421144, '', 19.04627, -98.20408),
-(58, 'Grupo ptico Rx', '3 Poniente No. 512-A, Centro, Puebla, C.P 72000', '', 2423384, '', 19.04540, -98.20235),
-(59, 'Servicios opticos Sofia ', '3 Poniente No. 909, Col. Centro. Puebla. C.P. 72000', '', 0, '', 19.04692, -98.20550),
-(60, 'OPTICA FUTURA', '13 Poniente, No. 302, Col. Centro, Pue. 72000', '', 2423800, '', 19.04079, -98.20299),
-(61, 'Optica Ray Ban ', '7 Norte, No. 1201, Col. Centro, Pue. C.P. 72000', '', 2424103, '', 19.05160, -98.20037),
-(62, 'OPTICAS YORK', 'Av. Reforma, No. 305,. Col. Centro, C.P. 72000. ', '', 2423454, '', 19.04530, -98.20043);
+INSERT INTO `optica` (`idoptica`, `nombre`, `ubicacion`, `responsable`, `ext`, `telefono`, `email`, `ciudad`, `estado`, `lat`, `lng`) VALUES
+(1, 'Veotek', 'Calle 3 Sur 302 Altos, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0442, -98.2007),
+(2, 'Optica Eduardos', 'Av 4 Poniente 506, Centro, 72000 Puebla, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0478, -98.2011),
+(3, 'Óptica Galerías Plaza', 'Calle 4 Nte 1001, Centro, 72000 Puebla, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0469, -98.1934),
+(4, 'Optica el Optómetro', 'Av 3 Poniente 519, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2322084, '', 'Puebla', 'Puebla', 19.0454, -98.2029),
+(5, 'Optica Oculista Dra. Ignacia Enr', '9 Sur 904, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2980233, '', 'Puebla', 'Puebla', 19.0441, -98.2067),
+(6, 'Ah Optica', 'Ave Reforma 511, Centro, Puebla, C.P. 72000, Pue.', '', 222, 1307636, '', 'Puebla', 'Puebla', 19.044, -98.1999),
+(7, 'Ah Optica', 'Ave 3 Poniente 145, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2423058, '', 'Puebla', 'Puebla', 19.046, -98.2021),
+(8, 'Grupo Optico Rx', 'Calle 3 Poniente 319 2, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2324068, '', 'Puebla', 'Puebla', 19.045, -98.2018),
+(9, 'Macro Óptica Moriel', 'Calle 10 Oriente 21, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2468637, '', 'Puebla', 'Puebla', 19.0476, 98.1952),
+(10, 'Optica Jesus', 'Calle 9 Sur S/N Loc C, Centro, Puebla, C.P. 72000, Pue.', '', 222, 4677191, '', 'Puebla', 'Puebla', 19.0469, -98.205),
+(11, 'Optica Nova', 'Calle 3 Poniente 311, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2466633, '', 'Puebla', 'Puebla', 19.0448, -98.2013),
+(12, 'Óptica Quality', 'Calle 16 De Septiembre 1101, Centro, Puebla, C.P. 72000, Pue.', '', 222, 4032582, '', 'Puebla', 'Puebla', 19.0404, -98.2011),
+(13, 'Optica Samid', 'Calle 3 Pte 108, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2423777, '', 'Puebla', 'Puebla', 19.0439, -98.1994),
+(14, 'Opticas Devlyn', 'Ave Reforma 105, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2325553, '', 'Puebla', 'Puebla', 19.045, -98.2),
+(15, 'Optic Norte', 'Call 16 De Septiembre 702, Centro, Puebla, C.P. 72000, Pue.', '', 222, 5734098, '', 'Puebla', 'Puebla', 19.0419, -98.2001),
+(16, 'Optiman Puebla', '7 Norte 204, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2325375, '', 'Puebla', 'Puebla', 19.048, -98.2024),
+(17, 'Optica Central', 'Cll Reforma 301, Centro, Puebla, C.P. 72000, Pue.', 'J Gonzalez Angulo', 222, 2326875, '', 'Puebla', 'Puebla', 19.0452, -98.2003),
+(18, 'Optica del Ángel', 'Ave 5 Poniente 706, Centro, Puebla, C.P. 72000, Pue.', 'Servando Martinez Del Angel', 222, 2323972, '', 'Puebla', 'Puebla', 19.0456, -98.2046),
+(19, 'Optivision', 'Ave 5 Poniente 712, Centro, Puebla, C.P. 72000, Pue.', 'Susana Macias Martinez', 222, 2322861, '', 'Puebla', 'Puebla', 19.0456, -98.2046),
+(20, 'Optica 2020 Ray-Ban', 'Av 3 Poniente 137,  Centro, Puebla, C.P. 72000, Pue.', 'Jose Guillermo Medina Alvarez', 222, 2465266, '', 'Puebla', 'Puebla', 19.044, -98.1999),
+(21, 'Optica Joy', 'Ave 3 Pte 136, Centro, Puebla, C.P. 72000, Pue.', 'Manuel Salvador Monroy Ferra', 222, 2327425, '', 'Puebla', 'Puebla', 19.0442, -98.2),
+(22, 'Optica Londres', 'Ave Reforma 143, Centro, Puebla, C.P. 72000, Pue.', 'Manuel Moriel Sosa', 222, 2425464, '', 'Puebla', 'Puebla', 19.045, -98.1999),
+(23, 'Optica del Carmen', 'Calle 16 De Septiembre 1916, Centro, Puebla, C.P. 72000, Pue.', 'Mariana Sanchez Popoca', 222, 2372296, '', 'Puebla', 'Puebla', 19.0369, -98.203),
+(24, 'Optica Metalica', 'Clle Reforma 519, Centro, Puebla, C.P. 72000, Pue.', 'Ernesto Alonso Tovar Perdigon', 222, 2329553, '', 'Puebla', 'Puebla', 19.0463, -98.2024),
+(25, 'Óptica Oculista', 'Calle 9 Sur 904, Col. Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0441, -98.2066),
+(26, 'Outlet Optic', 'Av 5 Poniente No. 139 Local B, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2988961, '', 'Puebla', 'Puebla', 19.0435, -98.2007),
+(27, 'Optica Visuality', 'Calle 2 Norte No. 410 - A Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0458, -98.1959),
+(28, 'Óptica Americana', 'Calle 5 Norte No. 201 Local B, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2320718, '', 'Puebla', 'Puebla', 19.0469, -98.2012),
+(29, 'Ópticas Lux', 'Calle 4 Norte No. 2, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2252090, '', 'Puebla', 'Puebla', 19.0429, -98.1956),
+(30, 'Óptica Jeshua', 'Calle 16 De Septiembre No. 1303, El Carmen, Puebla, C.P.  72530 ,Pue.', '', 222, 4679136, '', 'Puebla', 'Puebla', 19.0397, -98.2015),
+(31, 'Óptica Esteli', 'Calle 4 Norte No. 219, Centro, Puebla, C.P.72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0383, -98.1984),
+(32, 'Óptica Erma', 'Av 21 Oriente No. 24, El Carmen, Puebla, C.P. 72530, Pue.', '', 222, 2375118, '', 'Puebla', 'Puebla', 19.0362, -98.2018),
+(33, 'Óptica Manhattan', 'Calle 7 Norte No.205 C, Centro, Puebla, C.P. 72000, Pue.', '', 222, 3683676, '', 'Puebla', 'Puebla', 19.0481, -98.2024),
+(34, 'Óptica el Ángel', 'Calle 9 Sur No. 305 Local C, Centro, Puebla, C.P. 72000, Pue.', '', 222, 6242422, '', 'Puebla', 'Puebla', 19.0462, -98.2055),
+(35, 'Óptica Especializada Admira', 'Av 10 Oriente No. 201-A, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2423184, '', 'Puebla', 'Puebla', 19.0475, -98.1949),
+(36, 'Optica Rango', 'Calle 2 Norte No. 612-A, Col Centro, Puebla, C.P. 72000,Pue', '', 0, 0, '', 'Puebla', 'Puebla', 19.0465, -98.1954),
+(37, 'OJ Óptica Jireh', 'Calle 2 Norte 1207-D, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0488, -98.1942),
+(38, 'Óptica Puebla', 'Calle 2 Norte No. 608, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0464, -98.1955),
+(39, 'Óptica New Vision', 'Av 16 Oriente No. 201 -D, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2326799, '', 'Puebla', 'Puebla', 19.0497, -98.1936),
+(40, 'Lentes Génesis', 'Calle 9 Sur No. 108 Local C, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0469, -98.205),
+(41, 'Macro Óptica Moriel', 'Calle 3 Poniente No. 307, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0447, -98.2012),
+(42, 'Óptica Paola', 'Calle 3 Sur No 501, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0436, -98.2012),
+(43, 'Óptica 3 y 3', 'Av 3 Poniente No. 303 Local D, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0446, -98.2008),
+(44, 'Opticks Tiffany Group', 'Av 3 Poniente No, 306 Local A, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0447, -98.2011),
+(45, 'Tiffany Ópticas', 'Av 3 Poniente No. 304 Local C, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0447, -98.2009),
+(46, 'Eye Optica', 'Av 3 Poniente No. 325, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0451, -98.202),
+(47, 'Óptica Mira', 'Av 3 Poniente No. 314 Local 4, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.045, -98.2017),
+(48, 'Óptica Optimar', 'Av 3 Poniente No. 317 Local B, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0449, -98.2017),
+(49, 'Óptica Alonso', 'Calle 3 Sur 305 - C , Centro, Puebla, C.P. 72000, Pue.', '', 222, 2321465, '', 'Puebla', 'Puebla', 19.0447, -98.201),
+(50, 'Óptica Class', 'Av 3 Poniente No. 305 Local A, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0446, -98.201),
+(51, 'Ópticas San Agustín', 'Av 3 Poniente No. 311 Local A, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2462895, '', 'Puebla', 'Puebla', 19.0448, -98.2014),
+(52, 'Óptica Exclusiva', 'Av 4 Poniente No. 101 Local I, Centro, Puebla, C.P. 72000, Pue.', '', 0, 0, '', 'Puebla', 'Puebla', 19.0461, -98.198),
+(53, 'Optica El Lensómetro', 'Av 3 Poniente No. 535, Centro, Puebla, C.P. 72000, Pue.', '', 222, 3611591, '', 'Puebla', 'Puebla', 19.0458, -98.2034),
+(54, 'Óptica Fama', 'Calle 3 Sur No. 107 Local A, Centro, Puebla, C.P. 72000, Pue.', '', 222, 2328094, '', 'Puebla', 'Puebla', 19.0448, -98.2005),
+(55, 'Optica Texas', '3 Norte No.1 Col. Centro, Puebla.', '', 222, 2324737, '', 'Puebla', 'Puebla', 19.0455, -98.2),
+(56, 'Optica medica', 'Av. Reforma, No.904,. Col. Centro, C.P. 72000. ', '', 222, 2463415, '', 'Puebla', 'Puebla', 19.0477, -98.205),
+(57, 'Grupo Óptico Empresarial', '3 Poniente No. 712-2, Centro, Puebla, C.P. 72000', '', 222, 2421144, '', 'Puebla', 'Puebla', 19.0463, -98.2041),
+(58, 'Grupo Óptico Rx', '3 Poniente No. 512-A, Centro, Puebla, C.P 72000', '', 222, 2423384, '', 'Puebla', 'Puebla', 19.0454, -98.2023),
+(59, 'Servicios Ópticos Sofía ', '3 Poniente No. 909, Col. Centro. Puebla. C.P. 72000', '', 0, 0, '', 'Puebla', 'Puebla', 19.0469, -98.2055),
+(60, 'OPTICA FUTURA', '13 Poniente, No. 302, Col. Centro, Pue. 72000', '', 222, 2423800, '', 'Puebla', 'Puebla', 19.0408, -98.203),
+(61, 'Óptica Ray Ban ', '7 Norte, No. 1201, Col. Centro, Pue. C.P. 72000', '', 222, 2424103, '', 'Puebla', 'Puebla', 19.0516, -98.2004),
+(62, 'OPTICAS YORK', 'Av. Reforma, No. 305,. Col. Centro, C.P. 72000. ', '', 222, 2423454, '', 'Puebla', 'Puebla', 19.0453, -98.2004),
+(63, 'Óptica Real', 'Xicohtencatl 1503-A, Col. Centro, C.P. 90300. ', 'Andrés Mendez', 241, 4185436, 'opticareal7@gmail.com', 'Apizaco', 'Tlaxcala', 19.4098, -98.145),
+(64, 'Armond Opticas', 'Calle Francisco Sarabia 401 Int. 4 . Col.  Centro, C.P. 90300', 'Adán Ruiz', 241, 4185568, 'oarmond@hotmail.com', 'Apizaco', 'Tlaxcala', 19.411, -98.1418),
+(65, 'Óptica del Parque', 'Calle 2 de Abril 203, Col. Centro, C.P. 90300.', 'Pánfilo García', 0, 0, '', 'Apizaco', 'Tlaxcala', 19.415, -98.1405),
+(66, 'Optica Photocorneal', 'Av. Hidalgo 106, Col. Centro, C.P. 90300.', 'Antonieta Montiel', 241, 4175932, '', 'Apizaco', 'Tlaxcala', 19.4148, -98.1398),
+(67, 'Ofta-Lent de México', 'Av. Cuauhtémoc 202-A, Col. Centro, C.P. 90300', '', 241, 0, '', 'Apizaco', 'Tlaxcala', 19.4164, -98.1404),
+(68, 'Centro Óptico', 'Av. Xicoténcatl 504-A. Col. Centro, C.P. 90300. ', 'Jonathan Ortega Luna ', 241, 1316410, '', 'Apizaco', 'Tlaxcala', 19.4143, -98.1425),
+(69, 'Óptica Santa Fe', 'Calle Francisco Sarabia 302-B. Col.  Centro, C.P. 90300', 'Minerva Muñoz', 241, 4186195, 'opticaruben1@hotmail.com', 'Apizaco', 'Tlaxcala', 19.412, -98.144),
+(70, 'Óptica López', 'Francisco I. Madero 304 C, Col. Centro, C.P. 90300.', 'Roberto Rojas Soto', 241, 1354215, '', 'Apizaco', 'Tlaxcala', 19.4147, -98.143),
+(71, 'Luna Visión', '', 'Miguel Ángel Cortés', 0, 0, '', 'Apizaco', 'Tlaxcala', 0, 0),
+(72, 'Arcángeles Visión', '', 'Norma Cortés', 0, 0, '', 'Apizaco', 'Tlaxcala', 0, 0),
+(73, 'Servicios Ópticos', 'Av. Libertad', '', 0, 0, '', 'Apizaco', 'Tlaxcala', 0, 0),
+(74, 'Servicios Opticos', 'Av. Calle Unión Sur, Col. Centro, C.P. 90800.', 'Oscar Alonso Sansores Mendez', 45, 2147483647, 'power_893@aol.com.mx', 'Santa Ana Chiautempan', 'Tlaxcala', 19.3139, -98.1975),
+(75, 'Centro Optico', 'Allende Poniente 21 esq. Calle Union, Col. Centro, C.P. 90800.', 'Silverio Ortega Ramirez', 246, 4649109, '', 'Santa Ana Chiautempan', 'Tlaxcala', 19.3156, -98.1963),
+(76, 'Optic', 'Manuel Saldaña Norte 4D, Col. Centro, C.P.  90800', 'Carla Hernandez Muñoz', 246, 4647467, 'alfycarla@yahoo.com.mx', 'Santa Ana Chiautempan', 'Tlaxcala', 19.3148, -98.1959),
+(77, 'Optica Universal', 'Blvd. Guillermo Valle 66 Local 58, Col. Centro, C.P. 90000', 'Felix Otilio Semita Manzano', 246, 4665987, '', 'Tlaxcala', 'Tlaxcala', 19.325, -98.2316),
+(78, 'Vista Femme', 'Lira y Ortega No 5 Int. 18, Col. Centro, C.P. 90000.', 'Jorge Rodolfo Carmona', 246, 4629877, 'cococar200@gmail.com', 'Tlaxcala', 'Tlaxcala', 19.32, -98.2375),
+(79, 'Optica de Jesus', 'Lira y Ortega No 17-A, Col. Centro. C.P. 90000.', 'Marell Flores Muñoz', 246, 4623264, 'optica_de_jesus@hotmail.com', 'Tlaxcala', 'Tlaxcala', 19.3205, -98.2371),
+(80, 'Optica San Jose', 'Guridi y Alcocer 24, esq. Lira y Ortega, Col. Centro, C.P. 90000', 'Fernando Vazquez Garcia', 246, 4661003, 'optica.sanjose@hotmail.com', 'Tlaxcala', 'Tlaxcala', 19.3195, -98.2377),
+(81, 'Optica San Jose', 'Lira y Ortega No. 16.C, Col. Centro, C.P. 90000.', 'Angelica Flores Parraguirre', 246, 4622198, 'angelica.floresp@yahoo.com.mx', 'Tlaxcala', 'Tlaxcala', 19.3193, -98.2378),
+(82, 'Centro Optico', 'Diego Muñoz Camargo No. 7-1, Col. Centro, C.P. 90000.', 'Nestor Nahum Ortega Luna', 246, 4660722, 'nestor144@hotmail.com', 'Tlaxcala', 'Tlaxcala', 19.3171, -98.2398),
+(83, 'Optica Gran Vision', 'Ignacio Allende 36, Col. Centro, C.P. 90000.', 'Guadalupe Vazquez Rodriguez.', 246, 4665917, 'optica_granvision@hotmail.com', 'Tlaxcala', 'Tlaxcala', 19.3184, -98.2402),
+(84, 'Optica Santa Maria', 'Molinatla No. 13, Col. San Esteban Tizatlán, C.P. 90100.', 'Marcelo Hernandez Ramos', 246, 4621331, 'marcelo_hd_r@hotmail.com', 'Tlaxcala', 'Tlaxcala', 19.3325, -98.2191);
 
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `optica`
+--
+ALTER TABLE `optica`
+  ADD PRIMARY KEY (`idoptica`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `optica`
+--
+ALTER TABLE `optica`
+  MODIFY `idoptica` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=85;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

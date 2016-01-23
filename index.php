@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    <iframe src="puebla.php" width="100%" height="700px" scrolling="no" frameborder="0"></iframe>
+    <iframe src="puebla.php" width="100%" height="1000px" scrolling="no" frameborder="0"></iframe>
   </body>
 
 </html>
